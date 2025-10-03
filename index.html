@@ -23,7 +23,8 @@
 <!-- ADD semantic and validated HTML -->
 <!-- ADD skip to main content -->
  <a href="#main" id="skip">Skip to Main Content</a>
-<header>
+
+ <header>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
       <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
@@ -45,13 +46,15 @@
         </ul>
       </nav>
    </header>
+
+ <main id="main">
    <section id="Welcome">
       <h2>Welcome to Civic Lens</h2>
         <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
         <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
     </section>   
 
-    <section id="main">   
+    <section id="news">   
       <h2>Breaking News</h2>
 
         <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
@@ -168,20 +171,22 @@
           </div>
 	        </fieldset>
           
-          <div>
 	        <input type="submit" name="subscribe" value="Subscribe">
-	        </div>
+	        
         </form>
-      </section> 
+      </section>
+    </main>
       
       <footer>
       <h2>Follow Us</h2>
+      <nav>
         <a href="#">Twitter/X</a>
         <a href="#">Instagram</a>
         <a href="#">YouTube</a>
         <a href="#">TikTok</a>
         <a href="#">LinkedIn</a>
-    
+      </nav>
+      
         <small>&copy; 2025 Civic Lens. All rights reserved.</small>
        </footer> 
         
