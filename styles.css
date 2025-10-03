@@ -65,10 +65,11 @@ body.dark-mode {
 }
 
 /* ///ADD/// Navigation Styles */
-
 nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  display: flex;
+  gap: 1rem; 
+  justify-self: center;
+  flex-wrap: wrap;
 }
 
 nav a{
@@ -96,7 +97,7 @@ nav li {
 h1, h2, h3 {
   color: var(--watchdog-white);
   font-family: Merriweather, serif;
-  display: inline;
+  display: block;
 }
 
 /* ///ADD/// medium styles 620px */
@@ -113,7 +114,7 @@ h1, h2, h3 {
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px) {
-  
+
 }
 
 
