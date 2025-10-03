@@ -62,6 +62,9 @@ body.dark-mode {
 	position: static;
 	width: auto;
 	height: auto;
+  background-color: var(--news-flash);
+  color: var(--watchdog-white);
+  border-radius: 0.25rem;
 }
 
 /* ///ADD/// Navigation Styles */
@@ -83,8 +86,15 @@ nav a{
   font-weight: bold;
   border-radius: 0.25rem;
 }
+
 nav li {
   list-style:none;
+}
+
+nav a:hover {
+  background-color: var(--watchdog-white);
+  color: var(--news-flash);
+  transition: var(--transition)
 }
 
 /* ///ADD/// Global Layout Styles */
@@ -95,26 +105,107 @@ nav li {
 
 /* ///ADD/// Global Text Styles */
 h1, h2, h3 {
-  color: var(--watchdog-white);
+  color: inherit;
   font-family: Merriweather, serif;
   display: block;
 }
 
 /* ///ADD/// medium styles 620px */
 @media screen and (max-width: 620px) {
+ header, footer{
+        background-color: var(--blue-bulletin);
+        color: var(--watchdog-white);
+    }
 
+    main{
+        display: grid;
+        grid-gap: 0.75em;
+        grid-template-columns: 1fr 1fr;
+        margin: 1em 0;
+    }
+
+    section{
+        background-color: var(--yellow);
+        color: var(--dark-gray);
+        margin: 0;
+    }
+
+    #one, #two, #seven, #eight{
+        grid-column: 1/3;
+    }
+
+    img{
+        width: 200px;
+        max-width: 200px;
+    }
 }
 
 
 /* ///ADD/// large styles 920px */
 @media screen and (min-width: 621px) and (max-width: 920px) {
+header, footer{
+        background-color: var(--black);
+        color: var(--white);
+    }   
 
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section{
+        background-color: var(--light-gray);
+    }
+
+    #one{
+        grid-column: 1/3;
+    }
+
+    #two{
+        grid-column: 3/4;
+        grid-row: 1/3;
+    }
+
+    #seven{
+        grid-column: 3/4;
+        grid-row: 3/5;
+    }
 }
 
 
 /* ///ADD/// x-large styles 1024px */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px)  {
+    header, footer{
+        background-color: var(--lime-green);
+        color: var(--dark-gray);
+    }
 
+    h1, h2{
+        display: inline-block;
+    }
+
+    section{
+        background-color: var(--blue);
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #one, #seven{
+        grid-column: 1/3;
+    }
+
+    #two{
+        grid-row: 1/2;
+    }
+
+    #two, #eight{
+        grid-column: 3/5;
+    }
+
+    #seven, #eight{
+        grid-row: 3/4;
+    }
 }
 
 
@@ -131,11 +222,11 @@ h1, h2, h3 {
 }
 
 @media (prefers-color-scheme: light) {
-    .day.light-scheme {
+    body.dark-mode {
       background: var(--watchdog-white);
       color: var(--truth-text);
     } 
-    .night.light-scheme {
+    body.light-mode {
         background: var(--watchdog-white); 
         color: var(--truth-text);
     }
@@ -151,5 +242,8 @@ h1, h2, h3 {
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
+nav:has(#menu-toggle:checked) {
+  background-color: var(--blue-bulletin);
+}
 
 }
