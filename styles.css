@@ -145,7 +145,7 @@ margin: 1rem auto;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  column-gap: 20px;
 }
 
 #breaking-news video{
@@ -157,6 +157,7 @@ margin: 1rem auto;
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3 1fr);
+  grid-row: auto;
   gap: 1rem;
 }
 
