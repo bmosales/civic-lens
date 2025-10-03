@@ -74,7 +74,7 @@ color: var(--watchdog-white);
 display: flex;
 flex-direction: column;
 gap: 0.5rem;
-align-items: left;
+align-items: flex-start;
 padding: 1rem;
 }
 #menu-button {
