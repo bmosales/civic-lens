@@ -17,9 +17,11 @@
 <!-- ADD link to stylesheet -->
  <link rel="stylesheet" href="styles.css">
 
-  <title>Civic Lens</title>
+<title>Civic Lens</title>
 </head>
+
 <body class="light-mode">
+
 <!-- ADD semantic and validated HTML -->
 <!-- ADD skip to main content -->
  <a href="#main" id="skip">Skip to Main Content</a>
@@ -32,9 +34,11 @@
       </svg>
     </button>
 
-      <h1>Civic Lens</h1>
+    <div class="header-top"> 
+    <h1>Civic Lens</h1>
       <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
-      
+    </div> 
+
       <nav class="mobile-nav" aria-label="Mobile Navigation">
         <input type="checkbox" id="menu-toggle" hidden>
         <label for="menu-toggle" class="menu-button">Menu</label>
@@ -48,6 +52,7 @@
    </header>
 
  <main id="main">
+
    <section id="welcome">
       <h2>Welcome to Civic Lens</h2>
         <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
@@ -56,6 +61,7 @@
 
     <section id="breaking-news">   
       <h2>Breaking News</h2>
+      <div class="breaking-grid">
         <article>
         <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
         <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
@@ -71,11 +77,12 @@
           <source src="videos/voter-suppression.mp4" type="video/mp4">
         </video>
         </article>
+      </div>
      </section>   
      
      <section id="featured-aticles">   
       <h2>Featured Articles</h2>
-        
+        <div class="featured-grid">
         <article>
         <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
         <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
@@ -135,7 +142,7 @@
         <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
         <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
         </article>
-        
+      </div>
      </section>    
 
      <section id="alerts">   
@@ -144,15 +151,11 @@
         <form action="https://wp.zybooks.com/form-viewer.php" method="post">
         
           <fieldset>
-	        <legend>Name</legend> 
-	        <label for="first-name">First Name</label>
-          <input id="first-name" name="first-name" type="text" autocomplete="given-name" required>
-          <label for="last-name">Last Name</label>
-          <input id="last-name" name="last-name" type="text" autocomplete="family-name" required>
+	        <label for="name">First Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
           </fieldset>
         
           <fieldset>
-          <legend>Mobile</legend>
           <label for="phone">Phone Number</label>
 	        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
           </fieldset>
@@ -162,43 +165,30 @@
 	        <legend>Notification Preferences</legend>
           <p>Receive text messages with the news you want to know.</p>
           
-          <div>
+      
           <input type="checkbox" id="news" name="news" />
           <label for="news">Breaking News</label>
-          </div>
 
-          <div>
           <input type="checkbox" id="politics" name="politics" />
           <label for="politics">Politics</label>
-          </div>
           
-          <div>
           <input type="checkbox" id="weather" name="weather" />
           <label for="weather">Weather</label>
-          </div>
 
-          <div>
           <input type="checkbox" id="sports" name="sports" />
           <label for="sports">Sports</label>
-          </div>
 
-          <div>
           <input type="checkbox" id="entertainment" name="entertainment" />
           <label for="entertainment">Entertainment</label>
-          </div>
 
-          <div>
           <input type="checkbox" id="world" name="world" />
           <label for="world">World</label>
-          </div>
 
-          <div>
           <input type="checkbox" id="financial" name="financial" />
           <label for="financial">Financial</label>
-          </div>
 	        </fieldset>
           
-	        <input type="submit" name="subscribe" value="Subscribe">
+	        <button type="submit">Subscribe</button>
 	        
         </form>
       </section>
