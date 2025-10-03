@@ -8,9 +8,9 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 /* Root Variables */
@@ -64,9 +64,19 @@ body.dark-mode {
   background-color: var(--news-flash);
   color: var(--watchdog-white);
   border-radius: 0.25rem;
+  box-shadow: var(--shadow);
 }
 
 /* ///ADD/// Navigation Styles */
+header{
+background: var(--blue-bulletin);
+color: var(--watchdog-white);
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+align-items: center;
+}
+
 nav {
   display: flex;
   gap: 1rem; 
@@ -102,16 +112,30 @@ nav a:hover {
     line-height: 1.35;
 }
 
-header {
-display: flex;
-}
-
 main {
 display: grid;
 gap: 1.5rem;
 padding: 1rem;
+margin: 1rem auto;
 }
 
+#breaking-news {
+  background: var(--news-flash);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+#breaking-news video{
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+#featured-articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -119,12 +143,20 @@ form {
 }
 
 /* ///ADD/// Global Text Styles */
-header {
-background-color: var(--blue-bulletin);
-color: var(--watchdog-white);
+header h1{
+font-family: var(--font-heading);
+font-size: 1.75rem;
+text-align: left;
 }
 
-header h1, h1, h2, h3 {
+header .tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--watchdog-white);
+  font-size: 0.95rem;
+}
+
+h1, h2, h3 {
   color: inherit;
   font-family: var(--font-heading);
   display: block;
@@ -141,69 +173,13 @@ header h1, h1, h2, h3 {
 
 /* ///ADD/// large styles 920px */
 @media screen and (min-width: 621px) and (max-width: 920px) {
-header, footer{
-        background-color: var(--black);
-        color: var(--white);
-    }   
 
-    main{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    section{
-        background-color: var(--light-gray);
-    }
-
-    #one{
-        grid-column: 1/3;
-    }
-
-    #two{
-        grid-column: 3/4;
-        grid-row: 1/3;
-    }
-
-    #seven{
-        grid-column: 3/4;
-        grid-row: 3/5;
-    }
 }
 
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px)  {
-    header, footer{
-        background-color: var(--lime-green);
-        color: var(--dark-gray);
-    }
-
-    h1, h2{
-        display: inline-block;
-    }
-
-    section{
-        background-color: var(--blue);
-    }
-
-    main{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    #one, #seven{
-        grid-column: 1/3;
-    }
-
-    #two{
-        grid-row: 1/2;
-    }
-
-    #two, #eight{
-        grid-column: 3/5;
-    }
-
-    #seven, #eight{
-        grid-row: 3/4;
-    }
+    
 }
 
 
