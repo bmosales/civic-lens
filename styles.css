@@ -74,13 +74,13 @@ color: var(--watchdog-white);
 display: flex;
 flex-direction: column;
 gap: 0.5rem;
-align-items: center;
+align-items: left;
 }
 
 nav {
   display: flex;
   gap: 1rem; 
-  justify-self: center;
+  justify-self: left;
   flex-wrap: wrap;
 }
 
