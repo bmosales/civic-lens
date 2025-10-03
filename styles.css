@@ -8,8 +8,6 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
-	vertical-align: baseline;
   box-sizing: border-box;
 }
 
@@ -72,9 +70,8 @@ header{
 background: var(--blue-bulletin);
 color: var(--watchdog-white);
 display: flex;
-flex-direction: column;
-gap: 0.5rem;
-align-items: flex-start;
+justify-content: space-around;
+align-items: center;
 padding: 1rem;
 }
 
@@ -126,6 +123,7 @@ nav a:hover {
 }
 
 /* ///ADD/// Global Layout Styles */
+/* ///ADD/// Global Text Styles */
 *{
     box-sizing: border-box;
     line-height: 1.35;
@@ -138,7 +136,7 @@ padding: 1rem;
 margin: 1rem auto;
 }
 
-#breaking-news .featured-grid {
+#breaking-news .breaking-grid {
   background: var(--news-flash);
   box-shadow: var(--shadow);
   padding: 1rem;
@@ -151,6 +149,18 @@ margin: 1rem auto;
   width: 100%;
   display: block;
   margin-top: 0.5rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3 1fr);
+  gap: 1rem;
+}
+
+.featured-grid article {
+  padding: 1rem;
+  border: 1px solid var(--blue-bulletin);
+  border-radius: 0.25rem;
 }
 
 form {
@@ -173,7 +183,22 @@ form button {
   cursor: pointer;
 }
 
-/* ///ADD/// Global Text Styles */
+footer{
+  background: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  padding: 1rem;
+}
+footer nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+small {
+  text-align: center;
+}
+
+
 
 h1, h2, h3 {
   color: inherit;
@@ -189,27 +214,34 @@ main {
 
 /* ///ADD/// medium styles 620px */
 @media screen and (max-width: 620px) {
- .menu-button {
-  display: block;
- }
- #breaking-news .breaking-grid{
+.breaking-grid {
   grid-template-columns: 1fr;
- }
- #featured-articles .featured-grid {
+}
+.featured-grid {
   grid-template-columns: 1fr;
- }
+}
 }
 
 
 /* ///ADD/// large styles 920px */
 @media screen and (min-width: 621px) and (max-width: 920px) {
-
+.breaking-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.featured-grid {
+  grid-template-columns: 1fr 1fr;
+}
 }
 
 
 /* ///ADD/// x-large styles 1024px */
 @media screen and (min-width: 1024px)  {
-    
+.breaking-grid {
+  grid-template-columns: inherit;
+}
+.featured-grid {
+  grid-template-columns: inherit;
+}
 }
 
 
